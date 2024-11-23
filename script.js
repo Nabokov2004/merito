@@ -29,3 +29,8 @@ document.addEventListener("DOMContentLoaded", () => {
         selectedCategory.textContent = "";
     });
 });
+
+setTimeout(() => {
+    document.querySelector('.animation').style.display = 'none'; // Скрыть анимацию
+    document.querySelector('.content').classList.add('active');  // Показать основной контент
+  }, 1300);
