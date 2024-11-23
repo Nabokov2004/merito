@@ -1,0 +1,181 @@
+/* Сброс стилей */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Основной фон и шрифт */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #d3e4ff; /* Светло-голубой фон */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100vh;
+}
+
+/* Шапка */
+header {
+    background-color: #c5d8ff;
+    width: 100%;
+    padding: 20px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+header .logo {
+    display: flex;
+    align-items: center;
+}
+
+.logo-text {
+    font-size: 7rem;
+    font-weight: 1000;
+    color: #0066ff;
+}
+
+header h1 {
+    font-size: 2rem;
+    color: #000;
+    line-height: 0.9;
+    margin-top: 3.1rem;
+}
+
+header h1 .highlight {
+    color: #0066ff;
+}
+
+header p {
+    font-size: 0.9rem;
+    font-weight: bold;
+    color: #000;
+    margin-top: 5px;
+    margin-left: -5.5rem;
+
+}
+
+/* Основная часть */
+main {
+    text-align: center;
+    margin-top: 50px;
+}
+
+main h2 {
+    font-size: 1.5rem;
+    color: #000;
+    margin-bottom: 30px;
+}
+
+/* Меню */
+.menu {
+    display: flex;
+    flex-direction: column;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.menu-item {
+    text-decoration: none;
+    color: #0066ff;
+    font-size: 1.2rem;
+    padding: 10px 20px;
+    border: 1px solid #0066ff;
+    border-radius: 5px;
+    text-align: center;
+    transition: all 0.3s ease-in-out;
+    background-color: white;
+}
+
+.menu-item:hover {
+    background-color: #0066ff;
+    color: white;
+    cursor: pointer;
+}
+
+.cursor {
+    height: 45px;
+    margin-top: -2.7rem;
+    margin-left: 3.5rem;
+    position: absolute;
+}
+
+
+.hidden {
+    display: none;
+}
+
+#form-container {
+    margin-top: 20px;
+    text-align: center;
+}
+
+textarea {
+    width: 100%;
+    max-width: 500px;
+    height: 100px;
+    margin-bottom: 10px;
+    padding: 10px;
+    font-size: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    resize: none;
+}
+
+button[type="submit"] {
+    background-color: #0066ff;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+}
+
+button[type="submit"]:hover {
+    background-color: #0052cc;
+}
+
+
+@media (min-width: 1024px) {
+    .menu {
+        gap: 25px; /* Увеличиваем расстояние между пунктами меню */
+        max-width: 800px; /* Делаем меню шире */
+    }
+
+    .menu-item {
+        font-size: 1.8rem; /* Ещё больше шрифт для удобства */
+        padding: 20px 40px; /* Увеличиваем размер кнопок */
+    }
+
+    main h2 {
+        font-size: 2rem; /* Заголовок также увеличиваем */
+        margin-bottom: 40px; /* Делаем отступы больше */
+    }
+    .cursor{
+    height: 50px;
+    margin-top: -2.8rem;
+    margin-left: 4.9rem;
+    position: absolute;
+    }
+}
+/* Кнопка "Назад" */
+#back-button {
+    background-color: #ccc;
+    color: #333;
+    padding: 10px 20px;
+    border: 1px solid #aaa;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+#back-button:hover {
+    background-color: #bbb;
+    border-color: #888;
+}
+
+.formSection{
+    display: flex;
+    flex-direction: row;
+}

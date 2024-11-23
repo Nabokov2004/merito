@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Anonimowe Pytania Studentów</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <span class="logo-text">M</span>
+            <div>
+                <h1>UNIWERSYTET<br>WSB <span class="highlight">MERITO</span></h1>
+                <p>Anonimowe Pytania Studentów – Nowoczesna Platforma Wsparcia</p>
+            </div>
+        </div>
+    </header>
+    <main>
+        <h2 id="h2">Wybierz temat pytania</h2>
+        <!-- Меню выбора -->
+        <nav class="menu" id="menu">
+            <button class="menu-item" data-category="Rekrutacja">Rekrutacja
+              <img class="cursor" src="./img/cursor.png" alt="">
+            </button>
+            <button class="menu-item" data-category="Zajęcia">Zajęcia</button>
+            <button class="menu-item" data-category="Lokalizacja">Lokalizacja</button>
+            <button class="menu-item" data-category="Finansy">Finansy</button>
+            <button class="menu-item" data-category="Inny">Inny</button>
+        </nav>
+
+        <!-- Скрытая форма -->
+        <div id="form-container" class="hidden">
+            <h3>Wybrany temat: <span id="selected-category"></span></h3>
+            
+            <form>
+                <textarea placeholder="Wpisz swoje pytanie tutaj..." required></textarea>
+                <button type="submit">Wyślij pytanie</button> <button id="back-button" type="button">do tyłu</button>
+            </form>
+            
+          
+        </div>
+    </main>
+
+    <!-- Подключение JavaScript -->
+    <script src="script.js"></script>
+</body>
+</html>
