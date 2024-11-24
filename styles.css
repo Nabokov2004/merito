@@ -32,6 +32,10 @@ header .logo {
     font-size: 7rem;
     font-weight: 1000;
     color: #0066ff;
+    text-shadow: 1px 0 currentColor, 
+                 -1px 0 currentColor, 
+                 0 1px currentColor, 
+                 0 -1px currentColor;
 }
 
 header h1 {
@@ -193,6 +197,41 @@ button[type="submit"]:hover {
     justify-content: center;
 }
 
+#thank-you-message {
+    text-align: center;
+    margin-top: 50px;
+    font-family: Arial, sans-serif;
+    padding: 20px;
+    border: 2px solid #606aa4; 
+    border-radius: 10px; /* Закругленные углы */
+    background-color: #f9f9f9; /* Светлый фон */
+    text-align: center; /* Центрирование текста */
+    margin-top: 20px; /* Отступ сверху */
+    width:60%;
+    margin: auto;
+}
+
+
+#thank-you-message h3 {
+    font-size: 24px;
+    color: #000;
+}
+
+#thank-you-message p {
+    font-size: 18px;
+    color: #555;
+}
+
+#thank-you-message a {
+    font-size: 18px;
+    color: #007bff;
+    text-decoration: none;
+}
+
+#thank-you-message a:hover {
+    text-decoration: underline;
+}
+
 
 .content{
     display: none;
@@ -220,6 +259,10 @@ button[type="submit"]:hover {
     font-size: 10rem;
     font-weight: 1000;
     margin-top: -5.2rem;
+    text-shadow: 1px 0 currentColor, 
+                 -1px 0 currentColor, 
+                 0 1px currentColor, 
+                 0 -1px currentColor;
 }
 .animation{
     width: 100vw;

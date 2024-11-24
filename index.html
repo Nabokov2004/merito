@@ -55,20 +55,27 @@
         </nav>
 
 
-        <div id="form-container" class="hidden">
+        <div id="form-container" class="hidden" >
             <h3>Wybrany temat: <span id="selected-category"></span></h3>
             <div class="wrapper-form">
             <!-- <img class="qu" src="./img/qu.png" alt=""> -->
-            <form>
-               
-                <textarea placeholder="Wpisz swoje pytanie tutaj..." required></textarea>
+            <form action="https://formspree.io/f/xbljakrz" method="POST">
+                <input type="hidden" name="topic" id="topic-input" value="">
+                <textarea name="question" placeholder="Wpisz swoje pytanie tutaj..." required></textarea>
                 
                 <button type="submit">Wyślij pytanie</button> <button id="back-button" type="button">do tyłu</button>
             </form>
-            </div>  
+            </div>
             
           
         </div>
+
+        <div id="thank-you-message" class="hidden">
+            <h3>Dziękujemy za twoje pytanie!</h3>
+            <p>Odpowiedź możesz znaleźć na naszej stronie w ciągu 3 dni roboczych.</p>
+            <a href="https://facebook.merito.student.com" target="_blank">www.facebook.merito.student.com</a>
+        </div>
+
     </main>
  
     </div>
