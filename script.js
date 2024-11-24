@@ -35,16 +35,25 @@ document.addEventListener("DOMContentLoaded", () => {
         topicInput.value = '';
     });
 
-    // Обработчик отправки формы
     form.addEventListener('submit', (e) => {
         e.preventDefault(); // предотвращаем стандартное поведение отправки формы
 
-        // Скрыть форму
+        // Получаем данные формы
+        const formData = new FormData(form);
+
+        // Отправляем данные через fetch (асинхронно)
+        fetch(form.action, {
+            method: 'POST',
+            body: formData,
+        })
+        .then(response => {
+        
+                
+        })
         formContainer.classList.add('hidden');
 
-        // Показать сообщение
         thankYouMessage.classList.remove('hidden');
-        form.reset();
+
     });
 
     setTimeout(() => {
