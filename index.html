@@ -40,6 +40,14 @@
                 <p>Anonimowe Pytania Studentów – Nowoczesna Platforma Wsparcia</p>
             </div>
         </div>
+        <div class="language_selection">
+            <div>
+                <img src="https://img.icons8.com/?size=100&id=icJiym4CdALA&format=png&color=000000" alt="">
+                <img src="https://img.icons8.com/?size=100&id=hTMPE6ntTofO&format=png&color=000000" alt="">
+                <img src="https://img.icons8.com/?size=100&id=dHLUcDM_MwLT&format=png&color=000000" alt="">
+                <img src="https://img.icons8.com/?size=100&id=hTMPE6ntTofO&format=png&color=000000" alt="">
+            </div>
+        </div>
     </header>
     <main>
         <h2 id="h2">Wybierz temat pytania</h2>
@@ -60,6 +68,8 @@
             <div class="wrapper-form">
             <!-- <img class="qu" src="./img/qu.png" alt=""> -->
             <form action="https://formspree.io/f/xbljakrz" method="POST">
+                <!-- <form method="POST"> -->
+                <!-- <form id="question-form"> -->
                 <input type="hidden" name="topic" id="topic-input" value="">
                 <textarea name="question" placeholder="Wpisz swoje pytanie tutaj..." required></textarea>
                 
@@ -73,13 +83,13 @@
         <div id="thank-you-message" class="hidden">
             <h3>Dziękujemy za twoje pytanie!</h3>
             <p>Odpowiedź możesz znaleźć na naszej stronie w ciągu 3 dni roboczych.</p>
-            <a href="https://facebook.merito.student.com" target="_blank">www.facebook.merito.student.com</a>
+            <a href="https://facebook.merito.student.com" target="_blank">merito.student.com</a>
         </div>
 
     </main>
  
     </div>
-
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
     <script src="script.js"></script> 
 </body>
 </html>
