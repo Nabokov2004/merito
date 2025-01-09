@@ -36,28 +36,76 @@ document.addEventListener("DOMContentLoaded", () => {
     });
 
     form.addEventListener('submit', (e) => {
-        e.preventDefault(); // предотвращаем стандартное поведение отправки формы
+        e.preventDefault();
+            form.reset();
+            // Скрываем форму и показываем сообщение благодарности
+            formContainer.classList.add('hidden');
+            thankYouMessage.classList.remove('hidden');
 
-        // Получаем данные формы
-        const formData = new FormData(form);
+    })
+    // form.addEventListener('submit', (e) => {
+    //     e.preventDefault(); // предотвращаем стандартное поведение отправки формы
 
-        // Отправляем данные через fetch (асинхронно)
-        fetch(form.action, {
-            method: 'POST',
-            body: formData,
-        })
-        .then(response => {
+    //     // Получаем данные формы
+    //     const formData = new FormData(form);
+
+    //     // Отправляем данные через fetch (асинхронно)
+    //     fetch(form.action, {
+    //         method: 'POST',
+    //         body: formData,
+    //     })
+    //     .then(response => {
         
                 
-        })
-        formContainer.classList.add('hidden');
+    //     })
+    //     formContainer.classList.add('hidden');
 
-        thankYouMessage.classList.remove('hidden');
+    //     thankYouMessage.classList.remove('hidden');
 
-    });
+    // });
+
+    
+
+    // const formData = new FormData(form);
+
+    // // Преобразуем FormData в JSON-объект
+    // const data = {
+    //     topic: formData.get('topic'),
+    //     question: formData.get('question'),
+    // };
+
+    // // Отправляем запрос на сервер
+    // fetch('http://localhost:3000/questions', {
+    //     method: 'POST',
+    //     headers: {
+    //         'Content-Type': 'application/json', // Отправляем данные в формате JSON
+    //     },
+    //     body: JSON.stringify(data), // Преобразуем данные в строку
+    // })
+    //     .then((response) => {
+    //         if (!response.ok) {
+    //             throw new Error(`HTTP error! Status: ${response.status}`);
+    //         }
+    //         return response.json();
+    //     })
+    //     .then((result) => {
+    //         console.log('Успех:', result);
+    //         form.reset();
+    //         // Скрываем форму и показываем сообщение благодарности
+    //         formContainer.classList.add('hidden');
+    //         thankYouMessage.classList.remove('hidden');
+    //     })
+    //     .catch((error) => {
+    //         console.error('Ошибка отправки:', error);
+    //     });
+    // });
+
+
+
 
     setTimeout(() => {
         document.querySelector('.animation').style.display = 'none'; // Скрыть анимацию
         document.querySelector('.content').classList.add('active');  // Показать основной контент
     }, 2500);
 });
+

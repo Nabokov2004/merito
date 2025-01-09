@@ -21,8 +21,19 @@ header {
     width: 100%;
     padding: 20px;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    display: flex;
 }
 
+.language_selection{
+    position: absolute; /* Абсолютное позиционирование */
+    top: 20px;          /* Расстояние от верхнего края страницы */
+    right: 20px;        /* Расстояние от правого края страницы */
+    display: flex;      /* Для выравнивания изображений внутри */
+    gap: 10px;        
+}
+.language_selection img{
+    width: 50px;
+}
 header .logo {
     display: flex;
     align-items: center;
@@ -142,7 +153,16 @@ button[type="submit"]:hover {
     background-color: #0052cc;
 }
 
-
+@media (max-width:720px) {
+    
+    .language_selection{
+        position: absolute;
+        top: calc(100% - 65px); /* Верхняя граница минус 200px */
+        right: 30 px;
+        display: flex;      /* Для выравнивания изображений внутри */
+        gap: 10px;        
+    }
+}
 @media (min-width: 1024px) {
     .menu {
         gap: 25px; /* Увеличиваем расстояние между пунктами меню */
@@ -164,6 +184,7 @@ button[type="submit"]:hover {
         margin-left: 44rem;
         position: absolute;
     }
+
 }
 /* Кнопка "Назад" */
 #back-button {
