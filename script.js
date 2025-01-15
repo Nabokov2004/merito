@@ -36,13 +36,25 @@ document.addEventListener("DOMContentLoaded", () => {
     });
 
     form.addEventListener('submit', (e) => {
-        e.preventDefault();
-            form.reset();
-            // Скрываем форму и показываем сообщение благодарности
-            formContainer.classList.add('hidden');
-            thankYouMessage.classList.remove('hidden');
+        e.preventDefault(); // предотвращаем стандартное поведение отправки формы
 
-    })
+        // Получаем данные формы
+        const formData = new FormData(form);
+
+        // Отправляем данные через fetch (асинхронно)
+        fetch(form.action, {
+            method: 'POST',
+            body: formData,
+        })
+        .then(response => {
+        
+                
+        })
+        formContainer.classList.add('hidden');
+        form.reset();
+        thankYouMessage.classList.remove('hidden');
+
+    });
     // form.addEventListener('submit', (e) => {
     //     e.preventDefault(); // предотвращаем стандартное поведение отправки формы
 
